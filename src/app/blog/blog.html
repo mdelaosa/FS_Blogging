@@ -1,13 +1,27 @@
-<p>blog works!</p>
-<div class="listado-noticias">
-<h2>Listado de noticias</h2>
+<div class="conteiner">
+    <div class="formulario-noticia">
+            <h2>Formulario de noticia</h2>
+            <form>
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo">
+                <label for="imagen">Imagen (URL):</label>
+                <input type="text" id="imagen" name="imagen">
+                <label for="texto">Texto:</label>
+                <textarea id="texto"name="texto"></textarea>
+                <button type="submit">Publicar noticia</button>
+            </form>
+        </div>
 
-@for (noticia of noticias; track noticia.titulo) {
-<div class="noticia">
-    <h3>{{ noticia.titulo }}</h3>
-    <img [src]="noticia.imagen" alt="{{ noticia.titulo }}" width="300">
-    <p>{{ noticia.texto }}</p>
-    <small>{{ noticia.fecha }}</small>
-</div>
-}
+    <div class="listado-noticias">
+        <h2>Listado de noticias</h2>
+
+        @for (noticia of noticias; track noticia.titulo) {
+            <div class="noticia">
+                <h3>{{ noticia.titulo }}</h3>
+                <img [src]="noticia.imagen" alt="{{ noticia.titulo }}" width="300">
+                <p>{{ noticia.texto }}</p>
+                <small>{{ noticia.fecha }}</small>
+            </div>
+        }
+    </div>
 </div>
