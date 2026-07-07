@@ -17,13 +17,13 @@ export class Blog {
   noticias: Noticia[] = [
     {
       titulo: 'Noticia 1',
-      imagen: 'https://github.com/mdelaosa/FS_Maquetacion/blob/main/SOURCES/movil.png',
+      imagen: 'https://github.com/mdelaosa/FS_Maquetacion/blob/main/SOURCES/movil.png?raw=true',
       texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       fecha: new Date('2026-07-07'),
     },
     {
       titulo: 'Noticia 2',
-      imagen: 'https://github.com/mdelaosa/FS_Maquetacion/blob/main/SOURCES/movil%20de%20lado.png',
+      imagen: 'https://github.com/mdelaosa/FS_Maquetacion/blob/main/SOURCES/movil%20de%20lado.png?raw=true',
       texto: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       fecha: new Date('2026-07-07'),
     }
