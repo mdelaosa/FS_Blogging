@@ -3,7 +3,7 @@
         <img src="logo_noticias.png" alt="noticiaslogo" class="news-logo">
     </div>
 </header>
-<div class="conteiner">
+<div class="container">
     <div class="formulario-noticia">
             <h2>Formulario de noticia</h2>
             <form>
@@ -13,6 +13,9 @@
                 <input type="text" id="imagen" name="imagen" [(ngModel)]="newImagen" required>
                 <label for="texto">Texto*:</label>
                 <textarea id="texto" name="texto" [(ngModel)]="newTexto" required></textarea>
+                @if (envioNoticia && !newTitulo || !newImagen || !newTexto) {
+                    <p class="error-campo">Faltan campos obligatorios.</p>
+                }
                 <button type="submit" (click)="addNoticia()">Publicar noticia</button>
             </form>
         </div>
