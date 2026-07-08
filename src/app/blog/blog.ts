@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 interface Noticia {
   titulo: string;
@@ -9,7 +10,7 @@ interface Noticia {
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './blog.html',
   styleUrl: './blog.css',
 })
@@ -28,4 +29,24 @@ export class Blog {
       fecha: new Date('2026-07-07'),
     }
   ];
+
+  newTitulo: string = '';
+  newImagen: string = '';
+  newTexto: string = '';
+  newFecha: Date = new Date();
+
+  addNoticia():void {
+    const nuevaNoticia: Noticia = {
+      titulo: this.newTitulo,
+      imagen: this.newImagen,
+      texto: this.newTexto,
+      fecha: this.newFecha,
+    };
+    this.noticias.push(nuevaNoticia);
+
+    this.newTitulo = '';
+    this.newImagen = '';
+    this.newTexto = '';
+    this.newFecha = new Date();
+  }
 }
