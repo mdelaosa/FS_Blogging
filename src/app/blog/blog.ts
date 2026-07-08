@@ -36,12 +36,17 @@ export class Blog {
   newFecha: Date = new Date();
 
   addNoticia():void {
+    if (!this.newTitulo || !this.newImagen || !this.newTexto) {
+      return;
+    }
+    
     const nuevaNoticia: Noticia = {
       titulo: this.newTitulo,
       imagen: this.newImagen,
       texto: this.newTexto,
       fecha: this.newFecha,
     };
+
     this.noticias.push(nuevaNoticia);
 
     this.newTitulo = '';
