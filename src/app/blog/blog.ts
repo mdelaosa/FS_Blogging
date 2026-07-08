@@ -36,11 +36,8 @@ export class Blog {
   newFecha: Date = new Date();
 
   mensajeError: string = '';
-  envioNoticia: boolean = false;
 
   addNoticia():void {
-    this.envioNoticia = true;
-
     if (!this.newTitulo || !this.newImagen || !this.newTexto) {
       this.mensajeError = 'Todos los campos son obligatorios.';
       return;
@@ -59,6 +56,6 @@ export class Blog {
     this.newImagen = '';
     this.newTexto = '';
     this.newFecha = new Date();
-    this.envioNoticia = false;
+    this.mensajeError = '';
   }
 }

@@ -13,8 +13,8 @@
                 <input type="text" id="imagen" name="imagen" [(ngModel)]="newImagen" required>
                 <label for="texto">Texto*:</label>
                 <textarea id="texto" name="texto" [(ngModel)]="newTexto" required></textarea>
-                @if (envioNoticia && !newTitulo || !newImagen || !newTexto) {
-                    <p class="error-campo">Faltan campos obligatorios.</p>
+                @if (mensajeError) {
+                    <p class="error-campo">{{ mensajeError }}</p>
                 }
                 <button type="submit" (click)="addNoticia()">Publicar noticia</button>
             </form>
