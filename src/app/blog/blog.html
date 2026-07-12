@@ -28,7 +28,7 @@
                 <h3>{{ noticia.titulo }}</h3>
                 <img [src]="noticia.imagen" alt="{{ noticia.titulo }}" width="300">
                 <p>{{ noticia.texto }}</p>
-                <small>{{ noticia.fecha }}</small>
+                <small>{{ editarFecha(noticia.fecha) }}</small>
             </div>
         }
     </div>

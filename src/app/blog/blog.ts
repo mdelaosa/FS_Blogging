@@ -58,4 +58,8 @@ export class Blog {
     this.newFecha = new Date();
     this.mensajeError = '';
   }
+
+  editarFecha(fecha: Date): string {
+    return fecha.toLocaleDateString();
+  }
 }
