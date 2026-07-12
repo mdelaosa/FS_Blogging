@@ -100,12 +100,6 @@ header{
     height: 35px;
 }
 
-.footer-logo p{
-    color: #555;
-    font-size: 16px;
-    font-weight: 500;
-}
-
 .footer-socials{
     display: flex;
     justify-content: flex-end;
