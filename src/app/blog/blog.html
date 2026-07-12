@@ -26,7 +26,7 @@
         @for (noticia of noticias; track noticia.titulo) {
             <div class="noticia">
                 <h3>{{ noticia.titulo }}</h3>
-                <img [src]="noticia.imagen" alt="{{ noticia.titulo }}" width="300">
+                <img [src]="noticia.imagen" alt="{{ noticia.titulo }}">
                 <p>{{ noticia.texto }}</p>
                 <small>{{ editarFecha(noticia.fecha) }}</small>
             </div>
