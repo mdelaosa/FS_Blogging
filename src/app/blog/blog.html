@@ -6,7 +6,7 @@
 <div class="container">
     <div class="formulario-noticia">
             <h2>Formulario de noticia</h2>
-            <form>
+            <form (ngSubmit)="addNoticia()">
                 <label for="titulo">Título*:</label>
                 <input type="text" id="titulo" name="titulo" [(ngModel)]="newTitulo" required>
                 <label for="imagen">Imagen (URL)*:</label>
@@ -16,7 +16,7 @@
                 @if (mensajeError) {
                     <p class="error-campo">{{ mensajeError }}</p>
                 }
-                <button type="submit" (click)="addNoticia()">Publicar noticia</button>
+                <button type="submit">Publicar noticia</button>
             </form>
         </div>
 

@@ -4,7 +4,7 @@ import { Blog } from './blog/blog';
 
 @Component({
   selector: 'app-root',
-  imports: [/*RouterOutlet, */Blog],
+  imports: [Blog],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
