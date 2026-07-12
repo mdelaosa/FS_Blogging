@@ -1,5 +1,8 @@
 # FSBlogging
 
+Práctica 5 del Máster en FullStack de la UNIR, realizada por María de la Osa. 
+Todas las imágenes han sido realizadas con Gemini (IA).
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
 
 ## Development server
